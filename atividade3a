@@ -1,0 +1,43 @@
+package atividade3;
+
+import java.util.Scanner;
+
+public class NomeNascimento {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		int ano;
+		String[] nome = new String[10];
+		int i = 0;
+		
+	 		
+		for(i=0; i<=9; i++){	
+			
+			System.out.println("Digite seu nome: \n");
+			nome[i] = entrada.next();
+			
+			
+			System.out.println("\n Digite Ano de nascimento: ");
+			ano = entrada.nextInt();
+			
+				if(ano % 400 == 0 || (ano % 4 == 0 && ano % 100 != 0)) {
+					
+				System.out.println( nome[i] + " nasceu em um ano bissexto\n");
+					
+					for (String x : nome) {
+				      nome[i] = x;
+				
+				}
+				}
+				else {
+				System.out.println("Essa Pessoa nao nasceu em ano bissexto\n");		
+				
+				}	
+		}
+		for (String x : nome) {
+		      System.out.println(x);
+		
+	System.out.println("Aplicacao terminada");		
+	}
+   }
+}
+	
